@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="photo-grid">
+  {% assign images = site.static_files | where_exp: "file", "file.path contains page.gallery_dir" %}
+  {% for image in images %}
+    <img src="{{ image.path | relative_url }}" alt="">
+  {% endfor %}
+</div>

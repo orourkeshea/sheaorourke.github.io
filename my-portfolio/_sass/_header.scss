@@ -1,0 +1,32 @@
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

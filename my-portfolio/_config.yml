@@ -21,8 +21,7 @@
 title: Shea O'Rourke Portfolio
 domain: sheaorourke.github.io
 url: https://sheaorourke.github.io
-baseurl: "/my-portfolio"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
 repository: orourkeshea/sheaorourke.github.io
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -32,7 +31,9 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-
+  
+sass:
+  sass_dir: _sass
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,15 @@
+.photo-grid {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+    column-count: 1;
+  }
+}
+
+.photo-grid img {
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
