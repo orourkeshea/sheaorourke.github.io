@@ -2,9 +2,10 @@
 layout: default
 ---
 
-<div class="photo-grid">
-  {% assign images = site.static_files | where_exp: "file", "file.path contains page.gallery_dir" %}
-  {% for image in images %}
-    <img src="{{ image.path | relative_url }}" alt="">
-  {% endfor %}
+<div class="container py-4">
+  <div class="gallery d-flex overflow-x-scroll flex-nowrap" id="photoScroll">
+        <img class="gallery-img" src="https://media.sheaorourke.com/porta400_08132024_1-07899-positive.jpg">
+        <img class="gallery-img" src="https://media.sheaorourke.com/porta400_08132024_3-07963-Edit.jpg">
+  </div>
 </div>
+<script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>

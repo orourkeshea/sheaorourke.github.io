@@ -22,13 +22,58 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .wrapper {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: white;
+}
+#photoScroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+  gap: 5px;
+  padding: 0 20vw 2rem; /* margin on sides, scroll visible */
+  box-sizing: border-box;
+}
+
+#photoScroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+#photoScroll::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+}
+
+.gallery-img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  height: auto;
+  width: 60vw; /* This keeps it full width with space on the sides */
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* On small screens, use vertical layout */
+@media (max-width: 991.98px) {
+  #photoScroll {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    scroll-snap-align: unset;
+  }
 }
