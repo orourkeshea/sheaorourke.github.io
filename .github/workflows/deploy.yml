@@ -1,18 +1,18 @@
-name: Deploy Jekyll site to GitHub Pages (via gh-pages branch)
+name: Deploy Jekyll to GitHub Pages via gh-pages branch
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
@@ -22,10 +22,10 @@ jobs:
           gem install bundler
           bundle install
 
-      - name: Build Jekyll site
+      - name: Build site
         run: bundle exec jekyll build --source my-portfolio --destination _site
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
