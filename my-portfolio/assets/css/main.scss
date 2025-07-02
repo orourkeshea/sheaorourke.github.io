@@ -39,8 +39,8 @@ html, body {
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: #999 transparent;
-  gap: 5px;
-  padding: 0 20vw 2rem; /* margin on sides, scroll visible */
+  gap: 1em;
+  padding-bottom:2rem;
   box-sizing: border-box;
 }
 
@@ -70,10 +70,28 @@ html, body {
     overflow-y: auto;
     padding: 0;
   }
+  .scroll-hover-zone {
+    display: none;
+  }
 
   .gallery-img {
     width: 100%;
     height: auto;
     scroll-snap-align: unset;
+  }
+}
+/* Clean, cursor-only approach (inspired by Evgenia site) */
+body.cursor-left {
+  cursor: w-resize;
+}
+
+body.cursor-right {
+  cursor: e-resize;
+}
+
+@media (max-width: 991.98px) {
+  body.cursor-left,
+  body.cursor-right {
+    cursor: default;
   }
 }

@@ -1,16 +1,26 @@
+const scrollContainer = document.getElementById("photoScroll");
 
-  const scrollContainer = document.getElementById("photoScroll");
+// Cursor effect: track mouse near edges
+document.addEventListener("mousemove", (e) => {
+  const edgeZone = window.innerWidth * 0.2;
+  document.body.classList.remove("cursor-left", "cursor-right");
 
-  scrollContainer.addEventListener("click", (e) => {
-    const rect = scrollContainer.getBoundingClientRect();
-    const midpoint = rect.left + rect.width / 2;
-    const direction = e.clientX < midpoint ? -1 : 1;
+  if (e.clientX < edgeZone) {
+    document.body.classList.add("cursor-left");
+  } else if (e.clientX > window.innerWidth - edgeZone) {
+    document.body.classList.add("cursor-right");
+  }
+});
 
-    const sampleImg = scrollContainer.querySelector("img");
-    const scrollAmount = (sampleImg?.clientWidth || 300) / 2;
+// Optional: click-to-scroll behavior
+document.addEventListener("click", (e) => {
+  const edgeZone = window.innerWidth * 0.2;
+  const sampleImg = scrollContainer.querySelector("img");
+  const scrollAmount = (sampleImg?.clientWidth || 300) / 2;
 
-    scrollContainer.scrollBy({
-      left: direction * scrollAmount,
-      behavior: "smooth",
-    });
-  });
+  if (e.clientX < edgeZone) {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else if (e.clientX > window.innerWidth - edgeZone) {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+});
