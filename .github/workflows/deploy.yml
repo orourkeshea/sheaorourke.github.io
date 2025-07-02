@@ -1,13 +1,16 @@
-name: Deploy Jekyll to GitHub Pages via gh-pages branch
+name: Deploy Jekyll site via peaceiris
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-portfolio  # 👈 tells all run steps to operate in this folder
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,9 +26,9 @@ jobs:
           bundle install
 
       - name: Build site
-        run: bundle exec jekyll build --source my-portfolio --destination _site
+        run: bundle exec jekyll build --destination ../_site  # 👈 output to root-level _site folder
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
