@@ -23,8 +23,10 @@ domain: sheaorourke.github.io
 url: https://sheaorourke.github.io
 baseurl: "/my-portfolio"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+repository: orourkeshea/sheaorourke.github.io
 twitter_username: jekyllrb
 github_username:  jekyll
+
 
 # Build settings
 theme: minima
