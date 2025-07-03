@@ -1,6 +1,7 @@
 .site-header {
   background: white;
   padding: 2rem 0 1rem 0;
+  padding-bottom: 0;
 }
 
 .site-header .wrapper {
@@ -9,7 +10,6 @@
   align-items: baseline;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .site-title {
@@ -56,7 +56,7 @@ nav a:hover {
   color: black;
 }
 .site-logo {
-  height: 5em; /* or whatever fits */
+  height: 3em; /* or whatever fits */
   width: auto;
   display: block;
 }

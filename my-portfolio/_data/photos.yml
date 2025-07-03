@@ -1,0 +1,15 @@
+vermont:
+  - name: horse
+    alt: "horse"
+  - name: chair
+    alt: "chair"
+  - name: chest
+    alt: "chest"
+  - name: sunset_field
+    alt: "sunset_field"
+  - name: 3horses
+    alt: "3horses"
+  - name: horse_angled
+    alt: "horse_angled"
+  - name: red_road
+    alt: "red_road"
