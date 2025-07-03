@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="container py-4 position-relative">
   <div class="gallery d-flex overflow-x-scroll flex-nowrap" id="photoScroll">
-    {% assign folder = "vermont" %}
-    {% for photo in site.data.photos.vermont %}
+    {% assign folder = page.folder %}
+    {% for photo in site.data.photos[folder] %}
       {% include photo.html name=photo.name alt=photo.alt folder=folder %}
     {% endfor %}
   </div>

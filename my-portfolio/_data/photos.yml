@@ -13,3 +13,12 @@ vermont:
     alt: "horse_angled"
   - name: red_road
     alt: "red_road"
+capecod:
+  - name: friend_on_bridge
+    alt: "friend_on_bridge"
+  - name: purple_sunset
+    alt: "purple_sunset"
+  - name: flip
+    alt: "flip"
+  - name: hands_on_head
+    alt: "hands_on_head"

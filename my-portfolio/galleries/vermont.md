@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: Street
-permalink: /street/
+title: Vermont
+permalink: /vermont/
 folder: vermont
 ---
