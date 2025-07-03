@@ -20,17 +20,28 @@
 
 title: Shea O'Rourke Portfolio
 domain: sheaorourke.github.io
-url: https://sheaorourke.github.io
 baseurl: ""
 repository: orourkeshea/sheaorourke.github.io
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  orourkeshea
 
+title: Shea O'Rourke Portfolio
+description: Portfolio of Shea O’Rourke, photographer.
+url: "https://sheaorourke.com"
+author:
+  name: Shea O’Rourke
+  url: https://sheaorourke.com
+social:
+  name: Shea O’Rourke
+  links:
+    - https://www.instagram.com/_sheaorourke
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   
 sass:
   sass_dir: _sass
