@@ -33,3 +33,103 @@ html, body {
   height: 100%;
   background: white;
 }
+
+.landing-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* spacing between icons */
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.menu-icon {
+  width: 120px;
+  max-width: 30vw;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .landing-icons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .menu-icon {
+    max-width: 60vw;
+  }
+}
+
+body.landing {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .site-header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    .site-logo {
+      max-width: 80vw;
+      height: auto;
+    }
+
+    nav {
+      display: none; // Hide nav on landing page
+    }
+  }
+
+  .page-content {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+      padding: 0;
+      width: 100%;
+    }
+
+    .landing-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .menu-icon {
+      width: 100px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .menu-icon:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .landing-icons {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .menu-icon {
+        width: 80px;
+      }
+    }
+  }
+}
+body.landing .site-header nav {
+  display: none !important;
+}
