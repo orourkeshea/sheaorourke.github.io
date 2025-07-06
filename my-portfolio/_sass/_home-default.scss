@@ -1,3 +1,18 @@
 .landing-gallery {
     padding-top: 8vh;
 }
+.scroll-indicator-vertical {
+  gap: 8px;
+}
+
+.scroll-indicator-vertical .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-indicator-vertical .dot.active {
+  background-color: #333;
+}
