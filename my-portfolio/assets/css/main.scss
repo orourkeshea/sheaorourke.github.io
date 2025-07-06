@@ -8,6 +8,8 @@
 @import "nav";
 @import "gallery";
 @import "header";
+@import "home-section";
+@import "home-default";
 
 body {
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -22,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  margin: 0 auto;
-  padding: 0 2rem;
-}
 
 
 .landing-icons {
@@ -60,7 +58,6 @@ a {
 }
 
 body.landing {
-  height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -87,11 +84,6 @@ body.landing {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .wrapper {
-      padding: 0;
-      width: 100%;
-    }
 
     .landing-icons {
       display: flex;
@@ -124,6 +116,8 @@ body.landing {
     }
   }
 }
-body.landing .site-header nav {
-  display: none !important;
+@media (max-width: 767.98px) {
+  .image-section {
+    height: auto !important;
+  }
 }

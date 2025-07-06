@@ -1,7 +1,6 @@
 <header class="site-header">
-  <nav class="navbar navbar-expand-md navbar-light bg-white">
+  <nav class="navbar navbar-expand-md navbar-light bg-white nav-overlay">
     <div class="container-fluid">
-      <!-- Brand / Logo -->
       <a class="navbar-brand site-title" href="{{ '/' | relative_url }}">
         <img src="{{ '/assets/images/asset-8.svg' | relative_url }}" alt="Shea O’Rourke Logo" class="site-logo" />
       </a>
@@ -64,3 +63,26 @@
     </div>
   </nav>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let prevScrollPos = window.pageYOffset;
+    const header = document.querySelector(".site-header");
+
+    if (!header) return;
+
+    header.style.top = "0";
+
+    window.addEventListener("scroll", () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        header.style.top = "0";
+      } else {
+        header.style.top = "-100px";
+      }
+
+      prevScrollPos = currentScrollPos;
+    });
+  });
+</script>

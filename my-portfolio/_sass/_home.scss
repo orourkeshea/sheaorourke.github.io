@@ -1,0 +1,26 @@
+.card-link:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease;
+}
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.nav-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* dark translucent bg */
+  z-index: 100;
+} 

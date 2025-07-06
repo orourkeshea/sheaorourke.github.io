@@ -14,6 +14,7 @@
   height: 2em;
   width: auto;
   display: block;
+  z-index: inherit;
 }
 
 .instagram-link {
@@ -51,6 +52,7 @@
 .ig-logo {
   height: 3em; /* or whatever fits */
   margin: 0;
+  z-index: 1000;
   padding: 0;
 }
 
@@ -78,10 +80,27 @@
   height: 2.5em;
   max-height: 40px;
   width: auto;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {
   .site-logo {
     max-height: 30px;
   }
+}
+.navbar {
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+}
+nav {
+  background: red !important;
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 9999;
 }
