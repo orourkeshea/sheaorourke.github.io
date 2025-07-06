@@ -1,0 +1,38 @@
+.book-content {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.book-two-column {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .book-left {
+    padding-right: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .book-right img {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 4px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-two-column .book-left {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}

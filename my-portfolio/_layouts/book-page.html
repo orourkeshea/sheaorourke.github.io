@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<!-- Gallery section (same as gallery.html) -->
+<div class="gallery-container container-fluid position-relative">
+  <div class="d-flex overflow-x-scroll flex-nowrap" id="photoScroll">
+    {% assign folder = page.folder %}
+    {% for photo in site.data.photos[folder] %}
+      {% include photo.html name=photo.name alt=photo.alt folder=folder %}
+    {% endfor %}
+  </div>
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+</div>
+
+<!-- Blog-style content -->
+<div class="book-content container my-5">
+  {{ content }}
+</div>
+
+<script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
