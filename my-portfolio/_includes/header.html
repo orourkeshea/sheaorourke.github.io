@@ -20,7 +20,38 @@
 
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
+
+            <!-- Mobile-only Books dropdown -->
+            <li class="nav-item dropdown d-md-none">
+              <a class="nav-link dropdown-toggle" href="#" id="booksDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Books
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="booksDropdownMobile">
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="{{ "/vermont/" | relative_url }}">
+                    <img src="{{ '/assets/images/vermont-icon.svg' | relative_url }}" alt="Vermont" class="nav-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="{{ "/guatemala/" | relative_url }}">
+                    <img src="{{ '/assets/images/guatemala-icon.svg' | relative_url }}" alt="Guatemala" class="nav-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="{{ "/lny/" | relative_url }}">
+                    <img src="{{ '/assets/images/lny-icon.svg' | relative_url }}" alt="LNY" class="nav-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="{{ "/cape-cod/" | relative_url }}">
+                    <img src="{{ '/assets/images/cape-cod-icon.svg' | relative_url }}" alt="Cape Cod" class="nav-icon" />
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Desktop-only book icons -->
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="{{ "/vermont/" | relative_url }}">
                 <img src="{{ '/assets/images/vermont-icon.svg' | relative_url }}" 
                   data-hover="{{ '/assets/images/scribble-vermont-icon.svg' | relative_url }}"
@@ -28,7 +59,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="{{ "/guatemala/" | relative_url }}">
                 <img src="{{ '/assets/images/guatemala-icon.svg' | relative_url }}" 
                   data-hover="{{ '/assets/images/scribble-guatemala-icon.svg' | relative_url }}"
@@ -36,7 +67,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="{{ "/lny/" | relative_url }}">
                 <img src="{{ '/assets/images/lny-icon.svg' | relative_url }}" 
                   data-hover="{{ '/assets/images/scribble-lny-icon.svg' | relative_url }}"
@@ -44,7 +75,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="{{ "/cape-cod/" | relative_url }}">
                 <img src="{{ '/assets/images/cape-cod-icon.svg' | relative_url }}" 
                   data-hover="{{ '/assets/images/scribble-cape-cod.svg' | relative_url }}"
@@ -52,15 +83,18 @@
               </a>
             </li>
 
+            <!-- Instagram (visible everywhere) -->
             <li class="nav-item">
               <a class="nav-link" href="https://instagram.com/_sheaorourke" target="_blank" aria-label="Instagram">
                 <img src="{{ '/assets/images/asset-7.svg' | relative_url }}" alt="IG Logo" class="ig-logo" />
               </a>
             </li>
+
           </ul>
         </div>
       </div>
     </div>
   </nav>
 </header>
+
 <script src="{{ '/assets/js/header-scroll.js' | relative_url }}"></script>
