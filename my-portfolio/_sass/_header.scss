@@ -1,60 +1,25 @@
-.site-header {
-  background: white;
-  padding: 2rem 0 1rem 0;
-  padding-bottom: 0;
-}
-
-.site-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .site-title {
   font-size: 2rem;
   font-weight: 300;
-}
-
-.site-title a {
   color: #000;
   text-decoration: none;
-}
-
-.site-title {
   margin-left: 0;
 }
-
-.site-header .wrapper {
-  padding-left: 0; /* or 1rem */
+.site-logo {
+  height: 3em;
+  width: auto;
 }
 
-nav {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+.nav-icon {
+  height: 2em;
+  width: auto;
+  display: block;
 }
 
-nav a {
-  color: #444;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: black;
-}
 .instagram-link {
-  display: flex;
-  align-items: center;
   color: #444;
 }
 
-.instagram-link:hover {
-  color: black;
-}
 .site-logo {
   height: 2em; /* or whatever fits */
   width: auto;
@@ -68,7 +33,7 @@ nav a:hover {
 }
 
 .vermont-logo {
-  height: 2em; /* or whatever fits */
+  height: 3em; /* or whatever fits */
   width: auto;
   display: block;
 }
@@ -77,9 +42,46 @@ nav a:hover {
   width: auto;
   display: block;
 }
+.guatemala-logo {
+  height: 3em; /* or whatever fits */
+  width: auto;
+  display: block;
+}
 
 .ig-logo {
   height: 3em; /* or whatever fits */
   margin: 0;
   padding: 0;
+}
+
+@keyframes bounceIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  60%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    animation: bounceIn 0.6s ease;
+    animation-fill-mode: both;
+  }
+
+  .menu-icon:nth-child(1) { animation-delay: 0s; }
+  .menu-icon:nth-child(2) { animation-delay: 0.1s; }
+  .menu-icon:nth-child(3) { animation-delay: 0.2s; }
+}
+
+.navbar {
+  height: 8vh;
+}
+.site-logo {
+  height: 2.5em;
+  max-height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    max-height: 30px;
+  }
 }

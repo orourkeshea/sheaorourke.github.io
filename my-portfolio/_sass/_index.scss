@@ -35,3 +35,38 @@
     }
   }
 }
+
+.landing-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.menu-icon {
+  width: 10vw;
+  min-width: 64px;
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+/* On hover (desktop), or tap (mobile with JS fallback) */
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .landing-icons {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu-icon {
+    width: 20vw;
+    max-width: 90px;
+  }
+}

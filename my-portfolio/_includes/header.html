@@ -1,23 +1,66 @@
 <header class="site-header">
-  <div class="wrapper">
-    <div class="site-title">
-      <a href="{{ "/" | relative_url }}">
+  <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <div class="container-fluid">
+      <!-- Brand / Logo -->
+      <a class="navbar-brand site-title" href="{{ '/' | relative_url }}">
         <img src="{{ '/assets/images/asset-8.svg' | relative_url }}" alt="Shea O’Rourke Logo" class="site-logo" />
       </a>
-    </div>
-    <nav>
-      <a href="{{ "/vermont/" | relative_url }}">
-        <img src="{{ '/assets/images/vermont-nav.svg' | relative_url }}" alt="Vermont Logo" class="vermont-logo" />
-      </a>
-      <a href="{{ "/lny/" | relative_url }}">
-                <img src="{{ '/assets/images/asset-10.svg' | relative_url }}" alt="lny Logo" class="lny-logo" />
-      </a>
-      <a href="{{ "/cape-cod/" | relative_url }}">
-                <img src="{{ '/assets/images/capecod-nav.svg' | relative_url }}" alt="Cape Cod logo" class="capecod-logo" />
-      </a>
-        <a href="https://instagram.com/_sheaorourke" target="_blank" aria-label="Instagram">
+
+      <!-- Toggle button (opens offcanvas) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ "/vermont/" | relative_url }}">
+                <img src="{{ '/assets/images/vermont-icon.svg' | relative_url }}" 
+                  data-hover="{{ '/assets/images/scribble-vermont-icon.svg' | relative_url }}"
+                  alt="Vermont Logo" class="vermont-logo nav-icon" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ "/guatemala/" | relative_url }}">
+                <img src="{{ '/assets/images/guatemala-icon.svg' | relative_url }}" 
+                  data-hover="{{ '/assets/images/scribble-guatemala-icon.svg' | relative_url }}"
+                  alt="Guatemala Logo" class="guatemala-logo nav-icon" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ "/lny/" | relative_url }}">
+                <img src="{{ '/assets/images/lny-icon.svg' | relative_url }}" 
+                  data-hover="{{ '/assets/images/scribble-lny-icon.svg' | relative_url }}"
+                  alt="LNY Logo" class="lny-logo nav-icon" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ "/cape-cod/" | relative_url }}">
+                <img src="{{ '/assets/images/cape-cod-icon.svg' | relative_url }}" 
+                  data-hover="{{ '/assets/images/scribble-cape-cod.svg' | relative_url }}"
+                  alt="Cape Cod Logo" class="capecod-logo nav-icon" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://instagram.com/_sheaorourke" target="_blank" aria-label="Instagram">
                 <img src="{{ '/assets/images/asset-7.svg' | relative_url }}" alt="IG Logo" class="ig-logo" />
-        </a>
-    </nav>
-  </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>

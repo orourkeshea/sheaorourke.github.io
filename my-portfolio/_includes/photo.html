@@ -1,12 +1,11 @@
-
-      <img 
-        src="https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp"
-        srcset="
-          https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_small.webp 640w,
-          https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp 1280w,
-          https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_large.webp 2048w
-        "
-        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 60vw"
-        alt="{{ photo.alt }}"
-        class="gallery-img"
-      />
+<img 
+src="https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp"
+srcset="
+    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_small.webp 640w,
+    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp 1280w,
+    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_large.webp 2048w
+"
+sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 60vw"
+alt="{{ photo.alt }}"
+class="gallery-img"
+/>

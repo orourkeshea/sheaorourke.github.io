@@ -22,3 +22,36 @@ capecod:
     alt: "flip"
   - name: hands_on_head
     alt: "hands_on_head"
+guatemala-book:
+  - name: page1
+    alt: "page1"
+  - name: page2
+    alt: "page2"
+  - name: page3
+    alt: "page3"
+  - name: page4
+    alt: "page4"
+  - name: page5
+    alt: "page5"
+  - name: page6
+    alt: "page6"
+  - name: page7
+    alt: "page7"
+  - name: page8
+    alt: "page8"
+  - name: page9
+    alt: "page9"
+  - name: page10
+    alt: "page10"
+  - name: page11
+    alt: "page11"
+  - name: page12
+    alt: "page12" # remove 13 cause blank spread
+  - name: page14
+    alt: "page14"
+  - name: page15
+    alt: "page16"
+  - name: page17
+    alt: "page17" # remove 18 cause blank spread
+  - name: page19
+    alt: "page19"
