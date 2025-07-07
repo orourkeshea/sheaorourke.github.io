@@ -52,9 +52,13 @@ let isAutoScrolling = false;
   const currentScrollPos = window.pageYOffset;
 
   // Only hide/show header if the scroll is user-triggered
-  if (!isAutoScrolling && header) {
+if (!isAutoScrolling && header) {
+  if (currentScrollPos === 0) {
+    header.style.top = "0";
+  } else {
     header.style.top = prevScrollPos > currentScrollPos ? "0" : "-100px";
   }
+}
   prevScrollPos = currentScrollPos;
 
   // Hide chevrons while scrolling
