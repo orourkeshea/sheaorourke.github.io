@@ -12,10 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentScrollPos = window.pageYOffset;
     const isMenuOpen = document.body.classList.contains("offcanvas-backdrop");
 
+    // ✅ Immediately show header at top of page and exit
     if (currentScrollPos === 0) {
-      // Always show header at top of page
       header.style.top = "0";
-    } else if (!isMenuOpen) {
+      prevScrollPos = currentScrollPos;
+      ticking = false;
+      return;
+    }
+
+    if (!isMenuOpen) {
       if (currentScrollPos > prevScrollPos + scrollThreshold) {
         // Scrolling down
         header.style.top = "-100px";
