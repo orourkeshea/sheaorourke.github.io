@@ -166,3 +166,20 @@
   color: #000;
   text-decoration: underline;
 }
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .offcanvas {
+    top: 8vh !important; /* matches navbar height */
+    height: calc(100vh - 8vh) !important;
+    z-index: 1045; /* under navbar */
+  }
+}
