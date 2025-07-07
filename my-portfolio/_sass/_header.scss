@@ -5,9 +5,19 @@
   text-decoration: none;
   margin-left: 0;
 }
+
+.site-logo,
 .site-logo {
-  height: 3em;
+  height: 2.5em;
+  max-height: 40px;
   width: auto;
+  display: block;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  .site-logo {
+    max-height: 30px;
+  }
 }
 
 .nav-icon {
@@ -16,53 +26,102 @@
   display: block;
   z-index: inherit;
 }
-
-.instagram-link {
-  color: #444;
-}
-
-.site-logo {
-  height: 2em; /* or whatever fits */
-  width: auto;
-  display: block;
-}
-
-.lny-logo {
-  height: 2em; /* or whatever fits */
-  width: auto;
-  display: block;
-}
-
-.vermont-logo {
-  height: 3em; /* or whatever fits */
-  width: auto;
-  display: block;
-}
-.capecod-logo {
-  height: 2em; /* or whatever fits */
-  width: auto;
-  display: block;
-}
-.guatemala-logo {
-  height: 3em; /* or whatever fits */
-  width: auto;
-  display: block;
-}
-
 .ig-logo {
-  height: 3em; /* or whatever fits */
+  height: 3em;
   margin: 0;
   z-index: 1000;
   padding: 0;
 }
-
-@keyframes bounceIn {
-  0%   { transform: scale(0.7); opacity: 0; }
-  60%  { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); }
+.instagram-link {
+  color: #444;
+}
+.lny-logo,
+.capecod-logo {
+  height: 2em;
+  width: auto;
+  display: block;
+}
+.vermont-logo,
+.guatemala-logo {
+  height: 3em;
+  width: auto;
+  display: block;
 }
 
+.navbar {
+  height: 8vh;
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 9999;
+}
+
+/* Hamburger turns into X */
+.navbar-toggler.open .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23000' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E");
+}
+
+/* Remove Bootstrap's overlay */
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+/* Offcanvas mobile slideout below header */
 @media (max-width: 768px) {
+  .offcanvas {
+    top: 8vh !important;
+    height: calc(100vh - 8vh) !important;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-left: 1px solid #eaeaea;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .offcanvas-body .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .offcanvas-body .dropdown-menu {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    background-color: #fff;
+  }
+
+  .offcanvas-body .dropdown-item {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+  }
+
+  .offcanvas-body .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .offcanvas-body .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+
   .menu-icon {
     animation: bounceIn 0.6s ease;
     animation-fill-mode: both;
@@ -73,54 +132,37 @@
   .menu-icon:nth-child(3) { animation-delay: 0.2s; }
 }
 
-.navbar {
-  height: 8vh;
-}
-.site-logo {
-  height: 2.5em;
-  max-height: 40px;
-  width: auto;
-  z-index: 1000;
+@keyframes bounceIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  60%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
 }
 
-@media (max-width: 768px) {
-  .site-logo {
-    max-height: 30px;
-  }
+.offcanvas-footer {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.95rem;
+  color: #333;
 }
-.navbar {
-  width: 100%;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.7);
+
+.ig-footer-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.offcanvas {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.offcanvas-footer {
+  font-size: 0.95rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7); /* match navbar */
   backdrop-filter: blur(6px);
 }
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: top 0.3s;
-  z-index: 9999;
-}
-.offcanvas-body {
-  overflow: visible;
-  position: relative;
-}
-.offcanvas-body .dropdown-menu {
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-  margin-top: 0.5rem;
-}
-.offcanvas-body .dropdown-toggle {
-  background-color: #fff;
-  border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
-  display: inline-block;
-  margin-bottom: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.offcanvas-body {
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(4px);
+
+.ig-footer-link:hover {
+  color: #000;
+  text-decoration: underline;
 }

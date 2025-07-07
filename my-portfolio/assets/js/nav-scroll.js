@@ -76,6 +76,25 @@ document.addEventListener("DOMContentLoaded", function () {
     prevScrollPos = scrollY;
   };
 
+  window.addEventListener("scroll", () => {
+  const currentScrollPos = window.pageYOffset;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const buffer = 100; // px from bottom to stop header from flickering
+
+  // Only hide/show header if the scroll is user-triggered
+  if (!isAutoScrolling && header) {
+    const nearBottom = currentScrollPos + buffer >= maxScroll;
+
+    if (!nearBottom) {
+      header.style.top = prevScrollPos > currentScrollPos ? "0" : "-100px";
+    }
+  }
+
+  prevScrollPos = currentScrollPos;
+
+  // ...rest of your chevron/hide logic
+});
+
   // 📜 On scroll
   window.addEventListener("scroll", () => {
     updateHeaderVisibility();
