@@ -7,30 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!header) return;
 
   const scrollThreshold = 10;
-  let lastDirection = null;
 
   const updateHeader = () => {
     const currentScrollPos = window.pageYOffset;
+    const isMenuOpen = document.body.classList.contains("offcanvas-backdrop");
 
-    // Don't hide header if the nav is open (e.g., offcanvas)
-    const isMenuOpen = document.body.classList.contains('offcanvas-backdrop');
-
-    if (!isMenuOpen) {
-      if (Math.abs(currentScrollPos - prevScrollPos) > scrollThreshold) {
-        if (currentScrollPos > prevScrollPos) {
-          // Scrolling down
-          header.style.top = "-100px";
-          lastDirection = "down";
-        } else {
-          // Scrolling up
-          header.style.top = "0";
-          lastDirection = "up";
-        }
-
-        prevScrollPos = currentScrollPos;
+    if (currentScrollPos === 0) {
+      // Always show header at top of page
+      header.style.top = "0";
+    } else if (!isMenuOpen) {
+      if (currentScrollPos > prevScrollPos + scrollThreshold) {
+        // Scrolling down
+        header.style.top = "-100px";
+      } else if (currentScrollPos < prevScrollPos - scrollThreshold) {
+        // Scrolling up
+        header.style.top = "0";
       }
     }
 
+    prevScrollPos = currentScrollPos;
     ticking = false;
   };
 

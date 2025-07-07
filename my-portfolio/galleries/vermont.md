@@ -20,7 +20,7 @@ images:
     <div class="col-md-5 book-left">
       <h1>Red Clover</h1>
       <p><strong>Bound:</strong> January 2025</p>
-      <p>25 pages. 26 photographs. Size: 12x12 inches; Weight: 5.7 pounds (28x28.4cm; 2.6kg). Hardbound.</p>
+      <p>25 pages. 26 photographs. Self-printed and scanned. Hahnemuhle Photo Rag Book & Album 220 gsm paper   . Size: 12x12 inches; Weight: 5.7 pounds (28x28.4cm; 2.6kg). Self casebound.</p>
       <p>Trip to Vermont!</p>
     </div>
 
