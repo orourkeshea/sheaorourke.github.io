@@ -81,8 +81,6 @@
     height: calc(100vh - 8vh) !important;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(6px);
-    border-left: 1px solid #eaeaea;
-    box-shadow: none;
     border-radius: 0;
     overflow: visible;
   }
@@ -101,7 +99,6 @@
 
   .offcanvas-body .dropdown-menu {
     padding: 0;
-    box-shadow: none;
     border-radius: 0;
     border: none;
     background-color: #fff;
@@ -159,7 +156,7 @@
   font-size: 0.95rem;
   color: #333;
   background-color: rgba(255, 255, 255, 0.7); /* match navbar */
-  backdrop-filter: blur(6px);
+  backdrop-filter: none;
 }
 
 .ig-footer-link:hover {
@@ -180,6 +177,7 @@
   .offcanvas {
     top: 8vh !important; /* matches navbar height */
     height: calc(100vh - 8vh) !important;
+    background-color: #fff !important; /* ✅ solid white */
     z-index: 1045; /* under navbar */
   }
 }

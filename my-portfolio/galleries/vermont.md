@@ -13,6 +13,7 @@ images:
   - book3.jpg
   - book3.jpg
   - book3.jpg
+mobile_layout: swipe
 ---
 
 <div class="book-two-column container my-5">

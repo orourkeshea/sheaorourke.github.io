@@ -22,28 +22,6 @@
   border-radius: 5px;
 }
 
-/* On small screens, use vertical layout */
-@media (max-width: 991.98px) {
-  #photoScroll {
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    gap: 0.5rem; /* Reduce excessive spacing between stacked images */
-    padding: 0; /* Ensure there's no extra padding causing space */
-  }
-
-  .scroll-hover-zone {
-    display: none;
-  }
-
-  .gallery-img {
-    height: auto !important; /* override desktop fixed height */
-    scroll-snap-align: unset;
-    margin: 0; /* Remove margins that may add vertical spacing */
-  }
-}
-
-
 /* Clean, cursor-only approach (inspired by Evgenia site) */
 body.cursor-left {
   cursor: w-resize;
@@ -95,4 +73,72 @@ body.cursor-right {
 .gallery-container {
   padding-top:8vh;
 }
+}
+
+/* On small screens, use vertical layout */
+@media (max-width: 991.98px) {
+  #photoScroll {
+    flex-direction: row; /* KEEP horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    padding: 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
+  
+  #photoScroll::-webkit-scrollbar {
+    display: none;            /* Chrome, Safari, Opera */
+  }
+
+  .gallery-img {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: auto;
+    // max-height: 100vh;
+    object-fit: contain;
+    scroll-snap-align: center;
+  }
+
+  .scroll-hover-zone {
+    display: none;
+  }
+  #photoScroll {
+  scroll-behavior: smooth;
+}
+}
+
+@media (max-width: 991.98px) {
+  #photoScroll[data-mobile-layout="swipe"] {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  #photoScroll[data-mobile-layout="swipe"] .gallery-img {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    scroll-snap-align: center;
+  }
+
+  #photoScroll[data-mobile-layout="column"] {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #photoScroll[data-mobile-layout="column"] .gallery-img {
+    width: 100%;
+    height: 0 !important;
+    flex: 0 0 100%;
+    max-height: auto !important;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    scroll-snap-align: unset;
+  }
 }

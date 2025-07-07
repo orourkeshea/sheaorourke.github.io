@@ -1,22 +1,24 @@
 <div class="container-fluid p-0">
-  <div id="{{ include.id }}" class="image-section vh-100 d-flex justify-content-center align-items-center position-relative overflow-hidden">
-    <img 
-      src="{{ include.desktop_image }}" 
-      class="img-fluid w-100 h-100 d-none d-md-block object-fit-cover" 
-      alt="Desktop Image">
+  <a href="{{ include.link }}" class="d-block text-decoration-none">
+    <div id="{{ include.id }}" class="image-section vh-100 d-flex justify-content-center align-items-center position-relative overflow-hidden">
+      
+      <img 
+        src="{{ include.desktop_image }}" 
+        class="img-fluid w-100 h-100 d-none d-md-block object-fit-cover" 
+        alt="Desktop Image" />
 
-    <img 
-      src="{{ include.mobile_image }}" 
-      class="img-fluid w-100 d-md-none" 
-      alt="Mobile Image">
+      <img 
+        src="{{ include.mobile_image }}" 
+        class="img-fluid w-100 d-md-none" 
+        alt="Mobile Image" />
 
-    <div class="position-absolute top-50 start-50 translate-middle text-center text-white text-shadow">
-      <a class="nav-link d-inline-block" href="{{ include.link }}">
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white text-shadow">
         <img src="{{ include.logo | relative_url }}" 
              data-hover="{{ include.hover_logo | relative_url }}" 
              alt="Section Logo" 
              class="{{ include.logo_class }}" />
-      </a>
+      </div>
+
     </div>
-  </div>
+  </a>
 </div>
