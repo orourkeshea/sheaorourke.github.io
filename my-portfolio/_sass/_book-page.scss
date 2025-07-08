@@ -1,7 +1,7 @@
 .book-content {
   max-width: 700px;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -13,8 +13,23 @@
 
   .book-left {
     padding-right: 2rem;
+  }
+
+  .book-article {
     font-size: 1rem;
     line-height: 1.6;
+
+    img {
+      width: 100%;
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 4px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
   }
 
   .book-right img {
@@ -22,6 +37,7 @@
     border: 1px solid #ddd;
     background: #fff;
     padding: 4px;
+    padding-right: 5em;
   }
 
   .btn {
@@ -34,5 +50,38 @@
   .book-two-column .book-left {
     padding-right: 0;
     margin-bottom: 2rem;
+  }
+}
+
+.book-left {
+  display: flex;
+  justify-content: center; /* horizontally center the .book-article */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.book-article {
+  max-width: 500px;         /* blog-style readable width */
+  width: 100%;
+  text-align: left;
+
+  h1 {
+    text-align: center;     /* center the title */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 4px;
+    margin: 1rem 0;
   }
 }

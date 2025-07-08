@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Gallery section (same as gallery.html) -->
-<div class="gallery-container container-fluid position-relative">
+<div class="gallery-container container-fluid full-bleed-mobile position-relative">
   <div class="d-flex overflow-x-scroll flex-nowrap" id="photoScroll">
     {% assign folder = page.folder %}
     {% for photo in site.data.photos[folder] %}
@@ -13,9 +13,24 @@ layout: default
   <div class="scroll-indicator" id="scrollIndicator"></div>
 </div>
 
-<!-- Blog-style content -->
-<div class="book-content container my-5">
-  {{ content }}
+<div class="book-two-column container-fluid  px-0 mt-6 mb-5">
+  <div class="row gx-5">
+    <div class="col-md-7 book-left">
+      {{ content }}
+    </div>
+    <div class="col-md-5 book-right">
+      {% for image in page.images %}
+        <img
+            src="https://media.sheaorourke.com/vermont/spreads/{{ image }}_large.webp"
+            alt="Book image"
+            class="gallery-img img-fluid mb-3"
+            data-full="https://media.sheaorourke.com/vermont/spreads/{{ image }}_large.webp"
+            data-caption="{{ image.caption }}"
+            data-group="vermont-book"
+        >
+       {% endfor %}
+    </div>
+  </div>
 </div>
 
 <script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>

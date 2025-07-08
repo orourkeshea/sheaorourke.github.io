@@ -27,6 +27,9 @@ body.cursor-left {
   cursor: w-resize;
 }
 
+body.cursor-left {
+  cursor: w-resize;
+}
 body.cursor-right {
   cursor: e-resize;
 }
@@ -140,5 +143,10 @@ body.cursor-right {
     object-fit: contain;
     margin-bottom: 1rem;
     scroll-snap-align: unset;
+  }
+
+  .container-fluid.full-bleed-mobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

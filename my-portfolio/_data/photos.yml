@@ -1,6 +1,7 @@
 vermont:
   - name: horse
     alt: "horse"
+    caption: "horse without eye"
   - name: chair
     alt: "chair"
   - name: chest
