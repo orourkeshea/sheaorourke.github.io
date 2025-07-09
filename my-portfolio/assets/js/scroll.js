@@ -83,3 +83,4 @@ scrollContainer.addEventListener("scroll", () => {
   dots.forEach(dot => dot.classList.remove("active"));
   if (dots[index]) dots[index].classList.add("active");
 });
+

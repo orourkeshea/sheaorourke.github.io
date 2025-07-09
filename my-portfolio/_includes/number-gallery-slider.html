@@ -1,0 +1,41 @@
+<div class="simple-slider" id="numberSlider-{{ include.id | default: 'default' }}">
+  <div class="slider-track">
+    {% assign images = include.images %}
+    {% assign folder = include.folder %}
+    {% assign group = include.group | default: 'gallery' %}
+    {% for image in images %}
+      <div class="slider-slide">
+        <img
+          src="https://media.sheaorourke.com/{{ folder }}/{{ image.name }}_large.webp"
+          alt="{{ image.alt | escape }}"
+          class="slider-img"
+          data-full="https://media.sheaorourke.com/{{ folder }}/{{ image.name }}_large.webp"
+          data-group="{{ group }}"
+          data-caption="{{ image.caption }}"
+        />
+      </div>
+    {% endfor %}
+  </div>
+  <div class="slider-caption" id="caption-{{ include.id | default: 'default' }}"></div>
+
+  <div class="slider-controls">
+    <button class="slider-button prevBtn" aria-label="Previous slide">
+      <svg class="icon icon-caret" viewBox="0 0 10 10" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="6,2 3,5 6,8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <span class="counter">
+      <span class="current">1</span> / {{ images.size }}
+    </span>
+
+    <button class="slider-button nextBtn" aria-label="Next slide">
+      <svg class="icon icon-caret" viewBox="0 0 10 10" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="4,2 7,5 4,8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+<script src="{{ '/assets/js/gallery-slider.js' | relative_url }}"></script>

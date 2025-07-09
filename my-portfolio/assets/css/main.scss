@@ -11,14 +11,33 @@
 @import "home-section";
 @import "home-default";
 @import "book-page";
+@import "number-gallery-slider";
 @import "lightbox";
-
 body {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #111;
+  font-family: 'Ovo', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000;
+}
+
+strong {
+  font-weight: 700;
+  color: #000000BF; // semi-transparent black as used in your screenshot
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Ovo', serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 a {
@@ -62,4 +81,7 @@ a {
   .image-section {
     height: auto !important;
   }
+}
+.book-two-column {
+  overflow-x: hidden;
 }

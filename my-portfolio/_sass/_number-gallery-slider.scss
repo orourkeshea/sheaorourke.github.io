@@ -1,0 +1,128 @@
+.slider-gallery {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  position: relative;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider-controls button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#slideCount {
+  font-size: 1rem;
+}
+.simple-slider {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.slider-img {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  width: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+}
+.slider-button {
+  color: rgba(0, 0, 0, 0.75); /* or use: var(--color-foreground) */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  scroll-margin: 0 !important; /* prevent scroll jumps on focus */
+  scroll-behavior: auto !important; /* disable smooth scroll jump */
+  outline: none !important; /* optional: remove default outline */
+}
+
+.slider-button .icon-caret {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+}
+
+.icon-caret {
+
+  scroll-margin: 0 !important; /* prevent scroll jumps on focus */
+  scroll-behavior: auto !important; /* disable smooth scroll jump */
+  outline: none !important; /* optional: remove default outline */
+}
+.slider-button:hover .icon-caret {
+  stroke: black; /* Optional hover effect */
+}
+.counter {
+    font-size:0.75rem;
+}
+.slider-caption {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
