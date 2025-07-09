@@ -1,14 +1,20 @@
+
 <img 
-  src="https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp"
-  srcset="
-    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_small.webp 640w,
-    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_medium.webp 1280w,
-    https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_large.webp 2048w
-  "
-  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 60vw"
-  alt="{{ photo.alt }}"
-  class="gallery-img"
-  data-full="https://media.sheaorourke.com/{{ folder }}/{{ photo.name }}_large.webp"
-  data-caption="{{ photo.caption }}"
-  data-group="{{ folder }}"
-/>
+    src="https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_medium.webp"
+    srcset="
+      https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_small.webp 640w,
+      https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_medium.webp 1280w,
+      https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_large.webp 2048w
+    "
+    sizes="{{ include.sizes | default: '(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 60vw' }}"
+    alt="{{ include.alt | default: '' }}"
+    class="{{ include.class | default: 'gallery-img' }} spinner-img"
+    data-full="https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_large.webp"
+    data-caption="{{ include.caption }}"
+    data-group="{{ include.group | default: include.folder }}"
+  />
+<div class="img-spinner">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45"/>
+    </svg>
+</div>

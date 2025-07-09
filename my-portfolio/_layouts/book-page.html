@@ -19,30 +19,27 @@ layout: default
       {{ content }}
     </div>
     <div class="col-md-6 book-right">
-      {% assign first = page.images[0] %}
-      {% assign rest = page.images | slice: 1, page.images.size %}
-
-      <!-- Lead image -->
-      <img
-        src="https://media.sheaorourke.com/vermont/spreads/{{ first }}_large.webp"
-        alt="Book lead image"
-        class="lead-img gallery-img img-fluid mb-4"
-        data-full="https://media.sheaorourke.com/vermont/spreads/{{ first }}_large.webp"
-        data-caption="{{ first.caption }}"
-        data-group="vermont-book"
-      >
-
+        {% assign rest = page.images | slice: 1, page.images.size %}
+        {% assign first = page.images[0] %}
+        {% include photo.html
+            name=first.name
+            alt=first.alt
+            caption=first.caption
+            folder=page.spread_folder
+            group=page.spread_folder
+            class="lead-img img-fluid mb-4 spinner-img"
+        %}
       <!-- Two-column grid -->
       <div class="image-grid">
         {% for image in rest %}
-        <img
-          src="https://media.sheaorourke.com/vermont/spreads/{{ image }}_large.webp"
-          alt="Book grid image"
-          class="grid-img gallery-img img-fluid mb-3"
-          data-full="https://media.sheaorourke.com/vermont/spreads/{{ image }}_large.webp"
-          data-caption="{{ image.caption }}"
-          data-group="vermont-book"
-        >
+            {% include photo.html
+                name=image.name
+                alt=image.alt
+                caption=image.caption
+                folder=page.spread_folder
+                group=page.spread_folder
+                class="grid-img gallery-img img-fluid mb-3 spinner-img"
+            %}
         {% endfor %}
       </div>
     </div>

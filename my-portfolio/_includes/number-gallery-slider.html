@@ -5,14 +5,14 @@
     {% assign group = include.group | default: 'gallery' %}
     {% for image in images %}
       <div class="slider-slide">
-        <img
-          src="https://media.sheaorourke.com/{{ folder }}/{{ image.name }}_large.webp"
-          alt="{{ image.alt | escape }}"
-          class="slider-img"
-          data-full="https://media.sheaorourke.com/{{ folder }}/{{ image.name }}_large.webp"
-          data-group="{{ group }}"
-          data-caption="{{ image.caption }}"
-        />
+            {% include photo.html
+                name=image.name
+                alt=image.alt
+                caption=image.caption
+                folder=folder
+                group=folder
+                class="slider-img gallery-img"
+            %}
       </div>
     {% endfor %}
   </div>

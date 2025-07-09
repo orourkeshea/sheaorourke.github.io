@@ -1,6 +1,5 @@
 .slider-gallery {
   max-width: 800px;
-  margin: 4rem auto;
   text-align: center;
   position: relative;
 }
@@ -58,6 +57,7 @@
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  margin-right: 0.75em;
 }
 
 
@@ -123,6 +123,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 1rem;
   box-sizing: border-box;
+}
+.simple-slider {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden; /* ✅ prevent vertical scroll */
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100%; /* important for consistent layout */
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 80vh; /* or adjust to whatever fits best */
+  object-fit: contain; /* ✅ keeps images within bounds without distortion */
+  scroll-snap-align: center;
+  pointer-events: auto;
+  user-select: none;
+}
+.slider-slide {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider-slide img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
 }

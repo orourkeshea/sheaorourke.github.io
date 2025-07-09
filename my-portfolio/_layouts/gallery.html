@@ -7,7 +7,14 @@ layout: default
      data-mobile-layout="{{ page.mobile_layout | default: 'swipe' }}">
     {% assign folder = page.folder %}
     {% for photo in site.data.photos[folder] %}
-      {% include photo.html name=photo.name alt=photo.alt folder=folder %}
+      {% include photo.html
+        name=photo.name
+        alt=photo.alt
+        folder=folder
+        group=folder
+        class="gallery-img"
+        caption=photo.caption
+      %}
     {% endfor %}
   </div>
   <div class="scroll-indicator" id="scrollIndicator"></div>
