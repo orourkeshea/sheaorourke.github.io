@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   // Setup all clickable images
-  document.querySelectorAll(".gallery-img").forEach((img, _, allImgs) => {
+  document.querySelectorAll(".lightbox-img").forEach((img, _, allImgs) => {
     img.addEventListener("click", (e) => {
     if (isInEdgeZone(e.clientX)) {
         return; // Scroll zone → do nothing
     }
       const group = img.dataset.group;
-      galleryImgs = [...document.querySelectorAll(`.gallery-img[data-group="${group}"]`)];
+      galleryImgs = [...document.querySelectorAll(`.lightbox-img[data-group="${group}"]`)];
       currentIndex = galleryImgs.indexOf(img);
       openModal();
     });
@@ -147,4 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 }
 
+  document.querySelectorAll(".lightbox-img").forEach((img) => {
+    img.style.cursor = "zoom-in";
+  });
 });

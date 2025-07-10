@@ -8,7 +8,7 @@
     "
     sizes="{{ include.sizes | default: '(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 60vw' }}"
     alt="{{ include.alt | default: '' }}"
-    class="{{ include.class | default: 'gallery-img' }} spinner-img"
+    class="{{ include.class | default: 'gallery-img' }} spinner-img lightbox-img"
     data-full="https://media.sheaorourke.com/{{ include.folder }}/{{ include.name }}_large.webp"
     data-caption="{{ include.caption }}"
     data-group="{{ include.group | default: include.folder }}"

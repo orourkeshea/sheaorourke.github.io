@@ -16,8 +16,6 @@
       </div>
     {% endfor %}
   </div>
-  <div class="slider-caption" id="caption-{{ include.id | default: 'default' }}"></div>
-
   <div class="slider-controls">
     <button class="slider-button prevBtn" aria-label="Previous slide">
       <svg class="icon icon-caret" viewBox="0 0 10 10" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -35,6 +33,7 @@
       </svg>
     </button>
   </div>
+    <div class="slider-caption" id="caption-{{ include.id | default: 'default' }}"></div>
 </div>
 
 
