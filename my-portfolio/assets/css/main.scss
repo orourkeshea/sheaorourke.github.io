@@ -166,3 +166,26 @@ a {
   display: block;
   opacity: 1;
 }
+.scroll-down-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-down-btn.show {
+  display: flex;
+}

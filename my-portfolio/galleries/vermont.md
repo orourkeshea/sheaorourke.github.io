@@ -68,7 +68,7 @@ mobile_layout: swipe
 process_images:
   - name: marbling
     alt: "marbling"
-    caption: "Turkish marbling in my apartment on a large piece of paper."
+    caption: "Turkish marbling in my apartment on a large 19\" x 25\" of paper."
   - name: printing
     alt: "printing"
     caption: "Printed out on A3+ photo papers."

@@ -82,7 +82,7 @@ process_folder: process
 
 <div class="book-article">
 <p class="label-caption">JANUARY 2025</p>
-<h1>Active: Acatenango</h1>
+<h1>Active: Acatenango/Atitlán</h1>
 <h2>Details</h2>
 <ul>
 <li>25 pages</li>
@@ -92,7 +92,7 @@ process_folder: process
 <li>9.5x9.5 inches</li>
 </ul>
 <h2>About</h2>
-<p>Hike in Guatemala</p>
+<p>Trip to Antigua, Guatemala. The book is split into two halves, our time in Antigua hiking Acatenango and our time on Lake Atitlán.</p>
 <h2>Process</h2>
 
 <!-- <div class="mobile-centered-slider">
