@@ -41,42 +41,18 @@ images:
 mobile_layout: swipe
 
 process_images:
-  - name: marbling
-    alt: "marbling"
-    caption: "Turkish marbling in my apartment on a large piece of paper."
-  - name: printing
-    alt: "printing"
-    caption: "Printed out on A3+ photo papers."
-  - name: cutting
-    alt: "Cut prints to size."
-    caption: "Cut prints to size."
-  - name: coating2
-    alt: "Spray coating"
-    caption: "First attempt at coating each page in the book. After several arduous attempts realized the coating was far too thick and was meant for canvas... not paper. (All the pages just stuck together when bound.)"
-  - name: sewing
-    alt: "Completed sewing of the signatures."
-    caption: "Completed sewing of the signatures."
-  - name: spray
-    alt: "horse"
-    caption: "Switched to using Hahnemuhle's Protective Spray. For each print, perfect light coating."
-  - name: spine
-    alt: "horse"
-    caption: "Backside of embroidering the homemade bookcloth."
-  - name: spine3
-    alt: "Backside of embroidering the homemade bookcloth."
-    caption: "Finished emboridery, starting work on creating an inset for the extra fabric."
-  - name: cover1
-    alt: "horse"
-    caption: "Cutting out the inset photo on the book cover."
-  - name: cover2
-    alt: "horse"
-    caption: "Putting the bookcloth along the cover, using bone folder to define creases. Using a red clover pattern cotton fabric."
-  - name: rabbit
-    alt: "rabbit"
-    caption: "Create endbands for the spine."
-  - name: cover3
-    alt: "horse"
-    caption: "Finished cover without any pages."
+  - name: spraying
+    alt: "spraying"
+    caption: "Spraying Hahnemuhle protective spray on all the pages"
+  - name: guitar
+    alt: "Guitar"
+    caption: "Center of the Zine section."
+  - name: fullBleed
+    alt: "Full bleed page"
+    caption: "First time printing full bleed!"
+  - name: dog
+    alt: "dog"
+    caption: "Dog!"
 process_folder: process
 ---
 
@@ -94,7 +70,14 @@ process_folder: process
 <h2>About</h2>
 <p>Trip to Antigua, Guatemala. The book is split into two halves, our time in Antigua hiking Acatenango and our time on Lake Atitlán.</p>
 <h2>Process</h2>
-
+<div class="mobile-centered-slider">
+{% include number-gallery-slider.html
+  id="process"
+  images=page.process_images
+  folder="guatemala-book/process"
+  group="guatemala-book-process"
+%}
+</div>
 <!-- <div class="mobile-centered-slider">
 {% include number-gallery-slider.html
   id="process"
