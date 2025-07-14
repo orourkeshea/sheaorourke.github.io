@@ -13,7 +13,7 @@ layout: default
   <div class="scroll-indicator" id="scrollIndicator"></div>
 </div>
 
-<div class="book-wrapper container px-3 px-md-5">
+<div id="bookWrapper" class="book-wrapper container px-3 px-md-5">
   <div class="row gx-md-5 gy-5 align-items-start">
     <div class="col-md-6 book-left">
       {{ content }}
@@ -48,4 +48,9 @@ layout: default
 
 </div>
 
+<button id="bookScrollBtn" class="scroll-down-btn" aria-label="Scroll">
+  <i class="bi bi-arrow-down-short"></i>
+</button>
+
 <script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/book-scroll-btn.js' | relative_url }}"></script>
