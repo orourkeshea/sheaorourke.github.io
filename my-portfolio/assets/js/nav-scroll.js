@@ -67,9 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!header || isAutoScrolling) return;
 
-    if (scrollY === 0) {
+    // Always show header when at or above the top of the page
+    if (scrollY <= 0) {
       header.style.top = "0";
-    } else if (Math.abs(scrollY - prevScrollPos) > 10) {
+      prevScrollPos = 0;
+      return;
+    }
+
+    if (Math.abs(scrollY - prevScrollPos) > 10) {
       header.style.top = scrollY < prevScrollPos ? "0" : "-100px";
     }
 
@@ -80,6 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentScrollPos = window.pageYOffset;
   const maxScroll = document.body.scrollHeight - window.innerHeight;
   const buffer = 100; // px from bottom to stop header from flickering
+
+  if (currentScrollPos <= 0 && header) {
+    header.style.top = "0";
+    prevScrollPos = 0;
+    return;
+  }
 
   // Only hide/show header if the scroll is user-triggered
   if (!isAutoScrolling && header) {
