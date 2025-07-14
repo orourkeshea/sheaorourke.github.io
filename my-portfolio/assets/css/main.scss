@@ -19,7 +19,6 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.8;
-  color: #000;
 }
 
 strong {
@@ -38,6 +37,7 @@ p {
   margin-bottom: 1.5rem;
   font-size: 16px;
   line-height: 1.8;
+  color: rgba(0,0,0, .75);
 }
 
 a {
@@ -171,11 +171,8 @@ a {
   bottom: 2rem;
   right: 2rem;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border: none;
-  border-radius: 50%;
   width: 48px;
+  opacity: 80%;
   height: 48px;
   font-size: 1.5rem;
   line-height: 1;
@@ -194,3 +191,4 @@ a {
   max-width: 100%;
   text-wrap: balance;
 }
+

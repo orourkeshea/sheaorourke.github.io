@@ -27,7 +27,7 @@ layout: default
             caption=first.caption
             folder=page.spread_folder
             group=page.spread_folder
-            class="lead-img img-fluid mb-4 spinner-img lightbox-img gallery-img"
+            class="lead-img img-fluid mb-4 spinner-img lightbox-img"
         %}
       <!-- Two-column grid -->
       <div class="image-grid">
@@ -47,10 +47,7 @@ layout: default
 </div>
 
 </div>
-
-<button id="bookScrollBtn" class="scroll-down-btn" aria-label="Scroll">
-  <i class="bi bi-arrow-down-short"></i>
-</button>
+     <img id="bookScrollBtn" class="scroll-down-btn" aria-label="Scroll" src="{{ '/assets/images/down-arrow.svg' | relative_url }}" data-hover="{{ '/assets/images/scribble-cape-cod.svg' | relative_url }}" alt="Cape Cod Logo" class="capecod-logo nav-icon" />
 
 <script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/book-scroll-btn.js' | relative_url }}"></script>
