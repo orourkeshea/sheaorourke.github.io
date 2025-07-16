@@ -59,7 +59,7 @@ process_folder: lny/process
 
 <div class="book-article">
 <p class="label-caption">FEBRUARY 2025</p>
-<h1>龙年</h1>
+<h1>龙年 - Year of the Dragon</h1>
 <h2>Details</h2>
 <ul>
 <li>34 pages</li>
@@ -69,7 +69,13 @@ process_folder: lny/process
 <li>9.5x9.5 inches</li>
 </ul>
 <h2>About</h2>
-<p>Lunar New Year 2024</p>
+<p>A gift to Emily's family (a better version than the one pictured) for always hosting me during the Lunar New Year. Contains photos from the Lunar New Year celebration in NYC Chinatown as well as photos taken at the Tang's during 2024's Lunar New Year.
+<br><br>
+Cover design taken from Liu Dan's Ink paintings of Taihu Rocks in <a href="https://www.brooklynmuseum.org/objects/4341">Jiemei Studio</a> and <a  href="https://www.inkstudio.com.cn/artworks/3113-liu-dan-taihu-rock-of-the-liuyuan-garden-2019/">Liuyuan Garden</a>. Interpreted in a Chinese artist seal style.</p>
+<h2>Notes</h2>
+<p>This was the second book I did with borderless printing without initially understanding that I had a setting wrong on my printer causing the spine/gutter to be misalined (not centered). This causes that cut off line look in the spreads.
+<br><br>
+In the retrospect the prints/edit were a bit too contrasty for my liking. However I still like the cover design!</p>
 <h2>Process</h2>
 <div class="mobile-centered-slider">
 {% include number-gallery-slider.html

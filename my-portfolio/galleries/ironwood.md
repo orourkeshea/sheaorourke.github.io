@@ -66,7 +66,7 @@ process_images:
     caption: "First time doing some little product-esque photos. Taken using a softbox and reflector with my film scanning camera/lens. Homemade marbled paper."
   - name: marbling_process
     alt: "marbling_process"
-    caption: "Marbling the backdrop"
+    caption: "Marbling the backdrop."
 process_folder: ironwood/process
 ---
 
