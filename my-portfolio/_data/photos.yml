@@ -30,30 +30,14 @@ ironwood/pictures:
     alt: "flash_snow"
   - name: abyss
     alt: "abyss"
-  - name: abyss_sharp
-    alt: "abyss_sharp"
-  - name: bathing_sun
-    alt: "bathing_sun"
-  - name: bright_sun
-    alt: "bright_sun"
   - name: emily
     alt: "emily"
   - name: emily_knit
     alt: "emily_knit"
   - name: emily_mom_knit
     alt: "emily_mom_knit"
-  - name: emily_no_goggles
-    alt: "emily_no_goggles"
-  - name: emily_snow
-    alt: "emily_snow"
   - name: house
     alt: "house"
-  - name: map
-    alt: "map"
-  - name: preparation
-    alt: "preparation"
-  - name: red_tree
-    alt: "red_tree"
   - name: selfie
     alt: "selfie"
   - name: selfie_solo
@@ -64,14 +48,8 @@ ironwood/pictures:
     alt: "snowshoe"
   - name: steve
     alt: "steve"
-  - name: sunset_house
-    alt: "sunset_house"
-  - name: trees
-    alt: "trees"
   - name: under_tree
     alt: "under_tree"
-  - name: vertical_path
-    alt: "vertical_path"
 
 guatemala-book/pictures:
   - name: dog

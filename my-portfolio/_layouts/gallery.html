@@ -17,7 +17,9 @@ layout: default
       %}
     {% endfor %}
   </div>
+  {% unless page.mobile_layout == 'column' %}
   <div class="scroll-indicator" id="scrollIndicator"></div>
+  {% endunless %}
 </div>
 
 </div>

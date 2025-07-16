@@ -26,7 +26,7 @@ document.addEventListener("mousemove", (e) => {
 
   document.body.classList.remove("cursor-left", "cursor-right");
 
-  if (inLeftEdge) {
+   if (inLeftEdge) {
     document.body.classList.add("cursor-left");
   } else if (inRightEdge) {
     document.body.classList.add("cursor-right");
@@ -51,36 +51,66 @@ document.addEventListener("click", (e) => {
   // Disable this behavior on small screens
   if ('ontouchstart' in window) return;
 
-  const edgeZone = window.innerWidth * 0.2;
+  const offcanvas = document.getElementById('offcanvasNavbar');
+  if (
+    e.target.closest('#bookScrollBtn') ||
+    e.target.closest('a') ||
+    e.target.closest('button') ||
+    offcanvas?.classList.contains('show')
+  ) {
+    return;
+  }
+
+  const rect = scrollContainer.getBoundingClientRect();
+  const edgeZone = rect.width * 0.2;
   const sampleImg = scrollContainer.querySelector("img");
   const scrollAmount = (sampleImg?.clientWidth || 300) / 2;
 
-  if (e.clientX < edgeZone) {
+  const inLeftEdge =
+    e.clientX >= rect.left &&
+    e.clientX <= rect.left + edgeZone &&
+    e.clientY >= rect.top &&
+    e.clientY <= rect.bottom;
+  const inRightEdge =
+    e.clientX <= rect.right &&
+    e.clientX >= rect.right - edgeZone &&
+    e.clientY >= rect.top &&
+    e.clientY <= rect.bottom;
+
+  if (inLeftEdge) {
     scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  } else if (e.clientX > window.innerWidth - edgeZone) {
+  } else if (inRightEdge) {
     scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
   }
 });
 
 
+
+
 // Scroll indicator logic
-images.forEach((_, index) => {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (index === 0) dot.classList.add("active");
-  indicator.appendChild(dot);
-});
+if (indicator) {
+  images.forEach((_, index) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
 
-const dots = indicator.querySelectorAll(".dot");
+    dot.addEventListener("click", () => {
+      images[index].scrollIntoView({ behavior: "smooth", inline: "center" });
+    });
 
-scrollContainer.addEventListener("scroll", () => {
-  if (isModalOpen()) return;
+    indicator.appendChild(dot);
+  });
 
-  const scrollLeft = scrollContainer.scrollLeft;
-  const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-  const index = Math.round((scrollLeft / scrollWidth) * (images.length - 1));
+  const dots = indicator.querySelectorAll(".dot");
 
-  dots.forEach(dot => dot.classList.remove("active"));
-  if (dots[index]) dots[index].classList.add("active");
-});
+  scrollContainer.addEventListener("scroll", () => {
+    if (isModalOpen()) return;
 
+    const scrollLeft = scrollContainer.scrollLeft;
+    const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const index = Math.round((scrollLeft / scrollWidth) * (images.length - 1));
+
+    dots.forEach((dot) => dot.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  });
+}
