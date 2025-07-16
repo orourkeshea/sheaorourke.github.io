@@ -63,7 +63,10 @@ process_images:
     caption: "Camera got all frozen!"
   - name: spread-photos-setup
     alt: "spread-photos-setup"
-    caption: "First time doing some little product-esque photos. Taken using a softbox and reflector with my film scanning camera/lens."
+    caption: "First time doing some little product-esque photos. Taken using a softbox and reflector with my film scanning camera/lens. Homemade marbled paper."
+  - name: marbling_process
+    alt: "marbling_process"
+    caption: "Marbling the backdrop"
 process_folder: ironwood/process
 ---
 
@@ -74,7 +77,7 @@ process_folder: ironwood/process
 <ul>
 <li>42 pages</li>
 <li>22 photographs</li>
-<li>Self scanned, self printed, 3 hole bind</li>
+<li>Self scanned, self printed, 3 hole pamphlet stitch</li>
 <li>Red River 50lb Premium Matte Double-sided Photo Paper</li>
 <li>9.5x9.5 inches</li>
 </ul>

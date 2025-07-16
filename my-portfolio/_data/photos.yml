@@ -23,6 +23,9 @@ capecod:
     alt: "flip"
   - name: hands_on_head
     alt: "hands_on_head"
+lny:
+  - name: lny-lions
+    alt: "lny-lions"
 ironwood/pictures:
   - name: point
     alt: "point"
