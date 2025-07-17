@@ -3,40 +3,43 @@ layout: book-page
 title: Guatemala
 permalink: /guatemala/
 folder: guatemala-book/pictures
-spread_folder: guatemala-book
+spread_folder: guatemala-book/spreads
 images:
-  - name: page1
-    alt: "page1"
-  - name: page2
-    alt: "page2"
-  - name: page3
-    alt: "page3"
-  - name: page4
-    alt: "page4"
-  - name: page5
-    alt: "page5"
-  - name: page6
-    alt: "page6"
-  - name: page7
-    alt: "page7"
-  - name: page8
-    alt: "page8"
-  - name: page9
-    alt: "page9"
-  - name: page10
-    alt: "page10"
-  - name: page11
-    alt: "page11"
-  - name: page12
-    alt: "page12" # remove 13 cause blank spread
-  - name: page14
-    alt: "page14"
-  - name: page15
-    alt: "page16"
-  - name: page17
-    alt: "page17" # remove 18 cause blank spread
-  - name: page19
-    alt: "page19"
+  - name: guatemala-spread-page-front
+    alt: "guatemala-spread-page-front"
+  - name: guatemala-spread-page-1
+    alt: "guatemala-spread-page-1"
+  - name: guatemala-spread-page-2
+    alt: "guatemala-spread-page-2"
+  - name: guatemala-spread-page-3
+    alt: "guatemala-spread-page-3"
+  - name: guatemala-spread-page-4
+    alt: "guatemala-spread-page-4"
+  - name: guatemala-spread-page-5
+    alt: "guatemala-spread-page-5"
+  - name: guatemala-spread-page-6
+    alt: "guatemala-spread-page-6"
+  - name: guatemala-spread-page-7
+    alt: "guatemala-spread-page-7"
+  - name: guatemala-spread-page-8
+    alt: "guatemala-spread-page-8"
+  - name: guatemala-spread-page-9
+    alt: "guatemala-spread-page-9"
+  - name: guatemala-spread-page-10
+    alt: "guatemala-spread-page-10"
+  - name: guatemala-spread-page-11
+    alt: "guatemala-spread-page-11"
+  - name: guatemala-spread-page-12
+    alt: "guatemala-spread-page-12"
+  - name: guatemala-spread-page-13
+    alt: "guatemala-spread-page-13"
+  - name: guatemala-spread-page-14
+    alt: "guatemala-spread-page-14"
+  - name: guatemala-spread-page-15
+    alt: "guatemala-spread-page-15"
+  - name: guatemala-spread-page-back
+    alt: "guatemala-spread-page-back"
+
 
 mobile_layout: swipe
 
@@ -66,9 +69,13 @@ process_folder: process
 <li>Self scanned, self printed, 3 hole bind</li>
 <li>Red River 50lb Premium Matte Double-sided Photo Paper</li>
 <li>9.5x9.5 inches</li>
+<li><strong>Incorrect printing configuration with borderless printing caused this copy to have an uncentered gutter.</strong></li>
 </ul>
 <h2>About</h2>
-<p>Trip to Antigua, Guatemala. The book is split into two halves, our time in Antigua hiking Acatenango and our time on Lake Atitlán.</p>
+<p>Trip to Antigua, Guatemala. The book is split into two halves, our time in Antigua hiking Acatenango and our time on Lake Atitlán. The second half of the book, set in Lake Atitlán, as well as the back-cover is flipped vertically.
+</p>
+<h2>Notes</h2>
+This was my first "zine" book. Tried designing the cover to be similar to a magazine, but don't really love it.
 <h2>Process</h2>
 <div class="mobile-centered-slider">
 {% include number-gallery-slider.html

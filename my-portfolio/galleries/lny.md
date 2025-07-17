@@ -67,6 +67,7 @@ process_folder: lny/process
 <li>Self scanned, self printed, 3 hole pamphlet stitch</li>
 <li>Red River 50lb Premium Matte Double-sided Photo Paper</li>
 <li>9.5x9.5 inches</li>
+<li><strong>Incorrect printing configuration with borderless printing caused this copy to have an uncentered gutter.</strong></li>
 </ul>
 <h2>About</h2>
 <p>A gift to Emily's family (a better version than the one pictured) for always hosting me during the Lunar New Year. Contains photos from the Lunar New Year celebration in NYC Chinatown as well as photos taken at the Tang's during 2024's Lunar New Year.
@@ -75,7 +76,7 @@ Cover design taken from Liu Dan's Ink paintings of Taihu Rocks in <a href="https
 <h2>Notes</h2>
 <p>This was the second book I did with borderless printing without initially understanding that I had a setting wrong on my printer causing the spine/gutter to be misalined (not centered). This causes that cut off line look in the spreads.
 <br><br>
-In the retrospect the prints/edit were a bit too contrasty for my liking. However I still like the cover design!</p>
+In  retrospect the prints/edit are a bit too contrasty for my liking. However I still like the cover design!</p>
 <h2>Process</h2>
 <div class="mobile-centered-slider">
 {% include number-gallery-slider.html

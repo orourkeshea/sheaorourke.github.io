@@ -5,63 +5,49 @@ permalink: /vermont/
 folder: vermont
 spread_folder: vermont/spreads
 images:
-  - name: cover
-    alt: "cover"
-    caption: "cover"
-  - name: page1
-    alt: "page1"
-    caption: "page1"
-  - name: page2
-    alt: "page2"
-    caption: "page2"
-  - name: page3
-    alt: "page3"
-    caption: "page3"
-  - name: page4
-    alt: "page4"
-    caption: "page4"
-  - name: page5
-    alt: "page5"
-    caption: "page5"
-  - name: page6
-    alt: "page6"
-    caption: "page6"
-  - name: page7
-    alt: "page7"
-    caption: "page7"
-  - name: page8
-    alt: "page8"
-    caption: "page8"
-  - name: page9
-    alt: "page9"
-    caption: "page9"
-  - name: page10
-    alt: "page10"
-    caption: "page10"
-  - name: page11
-    alt: "page11"
-    caption: "page11"
-  - name: page12
-    alt: "page12"
-    caption: "page12"
-  - name: page13
-    alt: "page13"
-    caption: "page13"
-  - name: page14
-    alt: "page14"
-    caption: "page14"
-  - name: page15
-    alt: "page15"
-    caption: "page15"
-  - name: page16
-    alt: "page16"
-    caption: "page16"
-  - name: page17
-    alt: "page17"
-    caption: "page17"
-  - name: spine
-    alt: "spine"
-    caption: "spine"
+  - name: vermont-spread-page-cover
+    alt: "vermont-spread-page-cover"
+  - name: vermont-spread-page-1
+    alt: "vermont-spread-page-1"
+  - name: vermont-spread-page-2
+    alt: "vermont-spread-page-2"
+  - name: vermont-spread-page-3
+    alt: "vermont-spread-page-3"
+  - name: vermont-spread-page-4
+    alt: "vermont-spread-page-4"
+  - name: vermont-spread-page-5
+    alt: "vermont-spread-page-5"
+  - name: vermont-spread-page-6
+    alt: "vermont-spread-page-6"
+  - name: vermont-spread-page-7
+    alt: "vermont-spread-page-7"
+  - name: vermont-spread-page-8
+    alt: "vermont-spread-page-8"
+  - name: vermont-spread-page-9
+    alt: "vermont-spread-page-9"
+  - name: vermont-spread-page-10
+    alt: "vermont-spread-page-10"
+  - name: vermont-spread-page-11
+    alt: "vermont-spread-page-11"
+  - name: vermont-spread-page-12
+    alt: "vermont-spread-page-12"
+  - name: vermont-spread-page-13
+    alt: "vermont-spread-page-13"
+  - name: vermont-spread-page-14
+    alt: "vermont-spread-page-14"
+  - name: vermont-spread-page-15
+    alt: "vermont-spread-page-15"
+  - name: vermont-spread-page-16
+    alt: "vermont-spread-page-16"
+  - name: vermont-spread-page-17
+    alt: "vermont-spread-page-17"
+  - name: vermont-spread-page-18
+    alt: "vermont-spread-page-18"
+  - name: vermont-spread-page-back
+    alt: "vermont-spread-page-back"
+  - name: vermont-spread-page-fullcover
+    alt: "vermont-spread-page-fullcover"
+
 
 mobile_layout: swipe
 
@@ -113,6 +99,7 @@ process_folder: process
 <li>25 pages</li>
 <li>26 photographs</li>
 <li>Self scanned, self printed, self casebound</li>
+<li>French link stitch</li>
 <li>Hand-marbled endpapers</li>
 <li>Hahnemuhle Photo Rag Book & Album 220 gsm paper</li>
 <li>9.5x9.5 inches</li>
@@ -120,6 +107,12 @@ process_folder: process
 <h2>About</h2>
 <p>In August of 2024, Emily and I drove up to stay a long weekend at a farmhouse located in Hyde Park, Vermont. </p>
 <p>This book is a record of our trip.</p>
+<h2>
+Notes
+</h2>
+<p>
+First casebound photobook. Over time the book has begun to warp and sections have began seperating. This is likely a dual result of loose stitching and I think the cover board's grain direction was not considered. Future casebound books should have tight stitching and stitch with tapes to prevent sections seperation.
+</p>
 <h2>Process</h2>
 
 <div class="mobile-centered-slider">
