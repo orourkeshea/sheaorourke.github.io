@@ -14,6 +14,17 @@
   display: block;
   z-index: 1000;
 }
+
+.site-logo {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.site-logo:hover {
+  transform: scale(1.05);
+}
+.site-logo:active {
+  transform: scale(0.95);
+}
 @media (max-width: 768px) {
   .site-logo {
     max-height: 30px;

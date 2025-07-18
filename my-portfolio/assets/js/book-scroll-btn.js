@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('bookScrollBtn');
-  const wrapper = document.getElementById('bookWrapper');
+  const wrapper = document.getElementById('book-right');
   const offcanvas = document.getElementById('offcanvasNavbar');
   const lightbox = document.getElementById('lightbox');
   if (!btn || !wrapper) return;

@@ -62,8 +62,19 @@ a {
   transition: transform 0.2s ease;
 }
 
+// .menu-icon:hover {
+//   transform: scale(1.05);
+// }
+
+.menu-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
 .menu-icon:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+.menu-icon:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
@@ -182,6 +193,29 @@ a {
   align-items: center;
   transition: opacity 0.3s ease;
 }
+#bookScrollBtn {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+#bookScrollBtn:hover {
+  transform: scale(1.1);
+}
+#bookScrollBtn:active {
+  transform: scale(0.95);
+}
+
+
+.nav-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+.nav-icon:active {
+  transform: scale(0.95);
+}
+
 
 .scroll-down-btn.show {
   display: flex;

@@ -8,7 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let galleryImgs = [];
   let currentIndex = 0;
+let lastWheelTime = 0;
 
+lightbox.addEventListener("wheel", (e) => {
+  if (lightbox.classList.contains("hidden")) return;
+
+  const now = Date.now();
+  const deltaX = e.deltaX;
+  const deltaThreshold = 50;
+  const timeThreshold = 500; // ms
+
+  // Prevent accidental multi-scrolls
+  if (Math.abs(deltaX) > deltaThreshold && (now - lastWheelTime > timeThreshold)) {
+    if (deltaX > 0 && currentIndex < galleryImgs.length - 1) {
+      showNext();
+    } else if (deltaX < 0 && currentIndex > 0) {
+      showPrev();
+    }
+    lastWheelTime = now;
+  }
+});
+lightbox.addEventListener("wheel", (e) => {
+  if (!lightbox.classList.contains("hidden") && Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+    e.preventDefault();
+  }
+}, { passive: false });
   // Setup all clickable images
   document.querySelectorAll(".lightbox-img").forEach((img, _, allImgs) => {
     img.addEventListener("click", (e) => {
@@ -22,21 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-    function openModal() {
-    updateModal();
-    lightbox.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-    lightbox.setAttribute("tabindex", "-1");
-    lightbox.focus(); // ✅ Capture key events immediately
-    }
+function openModal() {
+  updateModal();
+  lightbox.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+  document.body.style.touchAction = "none";
+  lightbox.setAttribute("tabindex", "-1");
+  lightbox.focus();
+}
 
-  function closeModal() {
-    lightbox.classList.add("hidden");
-    document.body.style.overflow = "";
-    lightboxImg.src = "";
-    lightboxCaption.textContent = "";
-    lightboxDots.innerHTML = "";
-  }
+function closeModal() {
+  lightbox.classList.add("hidden");
+  document.body.style.overflow = "";
+  document.body.style.touchAction = "";
+  lightboxImg.src = "";
+  lightboxCaption.textContent = "";
+  lightboxDots.innerHTML = "";
+}
 
   function updateModal() {
     const img = galleryImgs[currentIndex];
