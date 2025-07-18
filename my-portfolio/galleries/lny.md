@@ -2,7 +2,7 @@
 layout: book-page
 title: Lunar New Year
 permalink: /lny/
-folder: lny
+folder: lny/pictures
 spread_folder: lny/spreads
 images:
   - name: lny25-spread-page-18 #front cover

@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Shea O'Rourke Portfolio
+title: Shea O'Rourke
 domain: sheaorourke.github.io
 baseurl: ""
 repository: orourkeshea/sheaorourke.github.io
 twitter_username: jekyllrb
 github_username:  orourkeshea
 
-title: Shea O'Rourke Portfolio
-description: Portfolio of Shea O’Rourke, photographer.
+title: Shea O'Rourke
+description: Shea O’Rourke Photography
 url: "https://sheaorourke.com"
 author:
   name: Shea O’Rourke

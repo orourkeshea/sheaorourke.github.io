@@ -23,9 +23,17 @@ capecod:
     alt: "flip"
   - name: hands_on_head
     alt: "hands_on_head"
-lny:
+lny/pictures:
   - name: lny-lions
     alt: "lny-lions"
+  - name: confetti
+    alt: "confetti"
+  - name: lionsblue
+    alt: "lionsblue"
+  - name: cards
+    alt: "cards"
+  - name: mask
+    alt: "mask"
 ironwood/pictures:
   - name: point
     alt: "point"
