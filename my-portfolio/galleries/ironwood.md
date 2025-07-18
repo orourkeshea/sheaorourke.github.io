@@ -27,8 +27,6 @@ images:
     alt: "ironwood-spread-page-8"
   - name: ironwood-spread-page-9
     alt: "ironwood-spread-page-9"
-  - name: ironwood-spread-page-10
-    alt: "ironwood-spread-page-10"
   - name: ironwood-spread-page-11
     alt: "ironwood-spread-page-11"
   - name: ironwood-spread-page-12
