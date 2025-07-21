@@ -21,24 +21,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   max-width: 90vw;
   max-height: 90vh;
 }
 
-.lightbox-content img {
+.lightbox-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+
+.lightbox-track::-webkit-scrollbar {
+  display: none;
+}
+
+.lightbox-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
   max-width: 90vw;
   max-height: 80vh; // Leave room for dots + caption
   object-fit: contain;
-  transition: opacity 0.3s ease;
-  opacity: 0;
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
 }
 
-.lightbox:not(.hidden) .lightbox-content img[src] {
-  opacity: 1;
-}
 
 .lightbox-nav {
   position: absolute;
